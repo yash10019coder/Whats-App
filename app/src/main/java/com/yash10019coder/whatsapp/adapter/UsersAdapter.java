@@ -46,10 +46,10 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "Hiiiiiiiii", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(context, ChatDetailActivity.class);
                 intent.putExtra("userID",users.getId());
-//                Log.i("123", users.getId().toString());
+//                Log.i("1234567", users.getId().toString());
                 intent.putExtra("profilePic",users.getProfile_pic());
                 intent.putExtra("username",users.getUsername());
                 context.startActivity(intent);

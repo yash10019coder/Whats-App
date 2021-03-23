@@ -40,9 +40,9 @@ public class ChatDetailActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
         final String senderID = auth.getUid();
-//        Log.i("hiya",senderID);
+        Log.i("hiya","senderID  "+senderID);
         String receiveID = getIntent().getStringExtra("userID");
-//        Log.i("hiya",receiveID);
+        Log.i("hiya","receiverID  "+receiveID);
         String profilePic = getIntent().getStringExtra("profilePic");
         String username = getIntent().getStringExtra("username");
 
