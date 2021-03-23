@@ -47,12 +47,12 @@ public class signup extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Users user = new Users(binding.etusername.getText().toString().trim(), binding.etemail.getText().toString().trim(), binding.etpassword.getText().toString().trim());
                             String id = task.getResult().getUser().getUid();
+                            user.setId(id);
                             database.getReference().child("Users").child(id).setValue(user);
                             Toast.makeText(signup.this, "User created succesfully", Toast.LENGTH_SHORT).show();
                         } else {
                             Toast.makeText(signup.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
-
 
                     }
                 });
