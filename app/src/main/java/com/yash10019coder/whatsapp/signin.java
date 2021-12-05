@@ -83,9 +83,7 @@ public class signin extends AppCompatActivity {
                     });
 
 
-                }
-                else
-                {
+                } else {
                     binding.etemail.setHint("Enter correct email");
 //                    binding.etemail.setHintTextColor();
 
@@ -141,7 +139,7 @@ public class signin extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            Users users=new Users();
+                            Users users = new Users();
                             users.setId(user.getUid());
                             users.setMail(user.getEmail());
                             users.setUsername(user.getDisplayName());

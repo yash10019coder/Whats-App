@@ -40,9 +40,9 @@ public class ChatDetailActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         auth = FirebaseAuth.getInstance();
         final String senderID = auth.getUid();
-        Log.i("hiya","senderID  "+senderID);
+        Log.i("hiya", "senderID  " + senderID);
         String receiveID = getIntent().getStringExtra("userID");
-        Log.i("hiya","receiverID  "+receiveID);
+        Log.i("hiya", "receiverID  " + receiveID);
         String profilePic = getIntent().getStringExtra("profilePic");
         String username = getIntent().getStringExtra("username");
 
@@ -52,15 +52,17 @@ public class ChatDetailActivity extends AppCompatActivity {
         binding.leftBackArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
+//                startActivity(intent);
+                finish();
             }
         });
         binding.profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
+//                startActivity(intent);
+                finish();
             }
         });
 
