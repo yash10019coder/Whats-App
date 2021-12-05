@@ -3,6 +3,7 @@ package com.yash10019coder.whatsapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -78,7 +79,7 @@ public class ChatDetailActivity extends AppCompatActivity {
 
             }
         });
-
+        linearLayoutManager.setStackFromEnd(true);
         binding.sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
