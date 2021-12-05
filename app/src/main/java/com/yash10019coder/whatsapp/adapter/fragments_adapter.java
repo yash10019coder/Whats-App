@@ -21,17 +21,15 @@ public class fragments_adapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
+            case 0:
+                return new chats();
             case 1:
-                return new chats();
-            case 2:
                 return new status();
-            case 3:
+            case 2:
                 return new calls();
-            default:
-                return new chats();
         }
 
-//        return null;
+        return null;
     }
 
     @Override
