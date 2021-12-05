@@ -49,22 +49,6 @@ public class ChatDetailActivity extends AppCompatActivity {
         binding.username.setText(username);
         Picasso.get().load(profilePic).placeholder(R.drawable.ic_user).into(binding.profileImage);
 
-        binding.leftBackArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
-        binding.profileImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
-//                startActivity(intent);
-                finish();
-            }
-        });
 
         final ArrayList<MessageModel> messageModels = new ArrayList<>();
 
@@ -135,7 +119,6 @@ public class ChatDetailActivity extends AppCompatActivity {
     }
 
     public void back(View view) {
-        Intent intent = new Intent(ChatDetailActivity.this, MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 }
